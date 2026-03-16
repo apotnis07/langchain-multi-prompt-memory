@@ -132,6 +132,12 @@ docker run -d --name langchain-app -p 80:80 --env-file .env langchain-app
 docker ps
 ```
 
+To stop and remove the image
+```bash
+docker stop langchain-app
+docker rm langchain-app
+```
+
 Visit http://0.0.0.0:80/docs to interact with the application.
 
 
