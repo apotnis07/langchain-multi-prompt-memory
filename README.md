@@ -138,7 +138,7 @@ docker stop langchain-app
 docker rm langchain-app
 ```
 
-Visit http://0.0.0.0:80/docs to interact with the application.
+Visit http://0.0.0.0:80/docs and select "Try it out" and enter a prompt in the text field to interact with the application. 
 
 
 
