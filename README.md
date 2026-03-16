@@ -21,8 +21,16 @@ flowchart LR
 
 ```
 .
-├── notebook.ipynb       # Main notebook with all code
-├── .env                 # API key (not committed)
+├── .env                # API key (not committed)
+├── .gitignore
+├── DockerLangChain     # Container Creation
+│   ├── .env            # API key (not committed)
+│   ├── Dockerfile      # Docker File to create Docker image
+│   ├── app
+│   │   ├── __init__.py
+│   │   └── main.py     # Includes FastAPI configuration with LangChain logic
+│   └── requirements.txt
+├── Project1.ipynb       # Standalone Jupyter notebook with all code
 └── README.md
 ```
 
@@ -108,4 +116,23 @@ chain.run("What chords do I know?")
 ```
 
 </details>
+
+# Containerization using Docker
+
+## Setup
+
+Visit this [link](https://www.docker.com/products/docker-desktop) to install the free version of Docker.
+
+### Steps to Run
+
+
+```bash
+docker build -t langchain-app .
+docker run -d --name langchain-app -p 80:80 --env-file .env langchain-app
+docker ps
+```
+
+Visit http://0.0.0.0:80/docs to interact with the application.
+
+
 
