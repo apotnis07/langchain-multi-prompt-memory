@@ -8,7 +8,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain, ConversationChain
 from langchain.memory import ConversationTokenBufferMemory, ConversationBufferWindowMemory
 
-llm_model = 'gpt-5-nano-2025-08-07'
+llm_model = 'gpt-4o-mini-2024-07-18'
 
 app = FastAPI(
     title="Hobby Buddy",
@@ -52,7 +52,7 @@ prompt_infos = [
     }
 ]
 
-llm = ChatOpenAI(model=llm_model, temperature=0.4)
+llm = ChatOpenAI(model=llm_model)
 
 destination_chains = {}
 for p_info in prompt_infos:
